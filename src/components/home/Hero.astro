@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+import StevenImage from '../../assets/pic-steven.jpg';
+---
+
+<div class="pb-12 mb-12 border-b border-gray-300 lg:flex lg:justify-between lg:items-center lg:gap-8 lg:pb-20">
+  <div class="max-w-[500px]">
+    <h1 class="text-6xl leading-none font-bold mb-2">
+      Steven Wanderski
+    </h1>
+
+    <p class="text-xl mb-10">
+      Hi! 👋 I am a life-long software engineer that has successfully exited a start-up and has helped raise over $180M for charities across the globe.
+    </p>
+
+    <div class="flex gap-4">
+      <a href="/contact" class="btn-black">Contact Me</a>
+      <a href="/resume" class="btn-white">View Resume</a>
+    </div>
+  </div>
+
+  <div class="hidden lg:block">
+    <Image src={StevenImage} alt="Pic of Steven" class="max-w-[437px]" />
+  </div>
+</div>

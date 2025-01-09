@@ -1,0 +1,23 @@
+* {
+  font-family: 'Geist';
+}
+
+[x-cloak] {
+  display: none;
+}
+
+h2 {
+  @apply text-3xl font-bold mb-8;
+}
+
+.btn-black {
+  @apply px-6 py-3 bg-black text-white leading-tight inline-block rounded-full border border-black shadow-sm hover:bg-zinc-800;
+}
+
+.btn-white {
+  @apply px-6 py-3 bg-white text-black leading-tight inline-block rounded-full border border-gray-300 shadow-sm hover:bg-zinc-50;
+}
+
+.wrap {
+  @apply lg:max-w-[1080px] lg:mx-auto lg:px-[40px];
+}
