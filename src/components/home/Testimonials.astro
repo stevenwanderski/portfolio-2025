@@ -1,0 +1,27 @@
+---
+import TestimonialCard from '@components/TestimonialCard.astro';
+import PicCorb from '@assets/pic-corb.png';
+import PicRonald from '@assets/pic-ronald.png';
+---
+
+<div class="pb-12 mb-12">
+  <h2>Testimonials</h2>
+
+  <div class="grid gap-8 lg:grid-cols-2">
+    <TestimonialCard
+      text="There wouldn't be a Popular Pays without Steven Wanderski. We relaunched the product in 2014 and for a time it was just him and I building it, day-in, day-out, testing and learning to find product-market fit. I can't recommend Steven enough!"
+      image={PicCorb}
+      imageAlt="Corbett Drummey"
+      name="Corbett Drummey"
+      title="Popular Pays, CEO"
+    />
+
+    <TestimonialCard
+      text="My partnership with Steve is the best professional relationship I've ever had. He is highly intelligent, incredibly meticulous, and writes the cleanest code imaginable. He is not just our developer. He is a valued member of the team that truly cares about our business and is always helping us craft a simpler and more effective product for our clients."
+      image={PicRonald}
+      imageAlt="Ronald Pruitt"
+      name="Ronald Pruitt"
+      title="4aGoodCause, CEO"
+    />
+  </div>
+</div>

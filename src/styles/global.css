@@ -21,3 +21,7 @@ h2 {
 .wrap {
   @apply lg:max-w-[1080px] lg:mx-auto lg:px-[40px];
 }
+
+.shadow {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+}
