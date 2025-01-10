@@ -1,9 +1,12 @@
+---
+const { format } = Astro.props;
+import Logo from '@components/Logo.astro';
+---
+
 <header class="mb-12 lg:mb-20" x-data="{ open: false }">
   <div class="lg:hidden">
     <div class="flex justify-between items-center mb-[16px]">
-      <div class="font-bold text-[22px]">
-        &lt;SW /&gt;
-      </div>
+      <Logo format={format} />
 
       <div class="flex flex-col gap-[6px] w-[30px] cursor-pointer" @click="open = !open">
         <div class="border-b border-[3px] border-black"></div>
@@ -22,9 +25,7 @@
   </div>
 
   <div class="hidden lg:flex justify-between items-center mb-[16px]">
-    <div class="font-bold text-[22px]">
-      <a href="/" class="hover:text-zinc-600">&lt;SW /&gt;</a>
-    </div>
+    <Logo format={format} />
 
     <div class="flex gap-5">
       <a class="px-[8px] font-bold hover:text-zinc-600" href="/#testimonials">Testimonials</a>

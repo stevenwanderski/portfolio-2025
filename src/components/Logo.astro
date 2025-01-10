@@ -1,0 +1,12 @@
+---
+const { format } = Astro.props;
+const shortFormat = '&lt;SW /&gt;';
+const fullFormat = '&lt;StevenWanderski /&gt;';
+---
+
+<div class="font-bold text-[22px]">
+  <a href="/">
+    {format === 'short' && <Fragment set:html={shortFormat} />}
+    {format === 'full' && <Fragment set:html={fullFormat} />}
+  </a>
+</div>
