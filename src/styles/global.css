@@ -23,7 +23,7 @@ h2 {
 }
 
 .wrap {
-  @apply lg:max-w-[1080px] lg:mx-auto lg:px-[40px];
+  @apply lg:max-w-[1280px] lg:mx-auto lg:px-[40px];
 }
 
 .shadow {
