@@ -1,0 +1,25 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import Hero from '@components/contact/Hero.astro';
+---
+
+<Layout>
+  <div class="wrap">
+    <Header format="full"/>
+    <Hero />
+
+    <div class="max-w-[500px] pb-12">
+      <div class="text-2xl font-bold">
+        Message received!
+      </div>
+
+      <p>
+        You will receive a response within a day or two.
+      </p>
+    </div>
+
+    <Footer />
+  </div>
+</Layout>
