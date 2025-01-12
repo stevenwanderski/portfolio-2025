@@ -3,14 +3,18 @@ const { image, alt, text, href } = Astro.props;
 import Image from 'astro/components/Image.astro';
 ---
 
-<div class="p-8 border border-zinc-300 rounded-2xl space-y-5 shadow">
-  <div>
-    <Image src={image} alt={alt} class="h-8 w-auto" />
+<div class="p-8 border border-zinc-300 rounded-2xl shadow flex flex-col justify-between">
+  <div class="space-y-5 mb-5">
+    <div>
+      <Image src={image} alt={alt} class="h-8 w-auto" />
+    </div>
+
+    <p>{text}</p>
   </div>
 
-  <p>{text}</p>
-
-  <a href={href} class="btn-black">
-    Learn More
-  </a>
+  <div>
+    <a href={href} class="btn-black">
+      Learn More
+    </a>
+  </div>
 </div>

@@ -1,42 +1,17 @@
 ---
-import ProjectCard from '@components/ProjectCard.astro';
-import Logo4aGC from '@assets/logo-4agc.svg';
-import LogoFitz from '@assets/logo-fitz.png';
-import LogoNWP from '@assets/logo-nwp.svg';
-import LogoPopPays from '@assets/logo-poppays.svg';
-import Image from 'astro/components/Image.astro';
+import Project4aGC from '@components/project-cards/4agc.astro';
+import ProjectFitz from '@components/project-cards/fitz.astro';
+import ProjectNWP from '@components/project-cards/nwp.astro';
+import ProjectPopPays from '@components/project-cards/poppays.astro';
 ---
 
-<div class="pb-12 mb-12 border-b border-gray-200 lg:pb-20">
+<div class="pb-12 border-b border-gray-200 lg:pb-20">
   <h2>Projects</h2>
 
   <div class="grid gap-6 lg:grid-cols-2 lg:gap-12">
-    <ProjectCard
-      image={Logo4aGC}
-      alt="4aGoodCause"
-      text="Full-stack web applications including SaaS functionality, payment processing and user accounts."
-      href="/project/4agoodcause"
-    />
-
-    <ProjectCard
-      image={LogoFitz}
-      alt="Friends for Fitz"
-      text="Full-stack web applications including SaaS functionality, payment processing and user accounts."
-      href="/project/friends-for-fitz"
-    />
-
-    <ProjectCard
-      image={LogoNWP}
-      alt="Native Workforce Partners"
-      text="Full-stack web applications including SaaS functionality, payment processing and user accounts."
-      href="/project/native-workforce-partners"
-    />
-
-    <ProjectCard
-      image={LogoPopPays}
-      alt="Popular Pays"
-      text="Full-stack web applications including SaaS functionality, payment processing and user accounts."
-      href="/project/popular-pays"
-    />
+    <Project4aGC />
+    <ProjectFitz />
+    <ProjectNWP />
+    <ProjectPopPays />
   </div>
 </div>
