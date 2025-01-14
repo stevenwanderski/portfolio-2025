@@ -1,16 +1,16 @@
 ---
 import { Image } from 'astro:assets';
-import RailsImage from '@assets/logo-rails.png';
+const { title, description, image, imageAlt } = Astro.props;
 ---
 
-<div class="pb-12 mb-12 border-b border-gray-200 lg:flex lg:justify-between lg:items-center lg:gap-8 lg:pb-20">
+<div class="pb-12 mb-12 border-b border-gray-200 lg:flex lg:justify-between lg:items-centerx lg:gap-8 lg:pb-20">
   <div class="max-w-[600px]">
     <h1 class="mb-2 text-5xl lg:text-6xl">
-      Ruby on Rails Development
+      {title}
     </h1>
 
     <p class="text-xl mb-10 max-w-[500px]">
-      With 15 years of experience and expert knowledge of Ruby on Rails, I specialize in building fast, scalable, and secure web applications that stand the test of time.
+      {description}
     </p>
 
     <div class="flex gap-4">
@@ -19,6 +19,6 @@ import RailsImage from '@assets/logo-rails.png';
   </div>
 
   <div class="hidden lg:block lg:pr-[150px]">
-    <Image src={RailsImage} alt="Ruby on Rails" class="max-w-[255px]" />
+    <Image src={image} alt={imageAlt} class="max-w-[255px]" />
   </div>
 </div>

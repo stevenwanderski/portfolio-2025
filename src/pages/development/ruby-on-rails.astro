@@ -5,13 +5,30 @@ import Footer from '@components/Footer.astro';
 import Hero from '@components/development/Hero.astro';
 import Skills from '@components/development/Skills.astro';
 import Projects from '@components/development/rails/Projects.astro';
+import RailsImage from '@assets/logo-rails.png';
 ---
 
 <Layout>
   <div class="wrap">
     <Header format="full"/>
-    <Hero />
-    <Skills />
+
+    <Hero
+      title="Ruby on Rails Development"
+      description="With 15 years of experience and expert knowledge of Ruby on Rails, I specialize in building fast, scalable, and secure web applications that stand the test of time."
+      image={RailsImage}
+      imageAlt="Ruby on Rails"
+    />
+
+    <Skills
+      skills={[
+        { title: 'Back-end', body: 'Ruby on Rails for MVC architecture, API design, webhook management, payment processing (Stripe, Authorize.net, PayPal).' },
+        { title: 'Front-end', body: 'React for UI / UX, TailwindCSS for theming, semantic HTML, HTMX for alternative UI / UX handling.' },
+        { title: 'SQL Database Design', body: 'Creating migrations and data models, optimize slow queries, creating complex custom queries.' },
+        { title: 'DevOps', body: 'Deploy and host on Heroku, error reporting using Sentry, log monitoring and debugging using Paper Trail.' },
+        { title: 'Testing', body: 'TDD using RSpec, E2E (end-to-end) testing using Capybara and Selenium.' }
+      ]}
+    />
+
     <Projects />
     <Footer />
   </div>

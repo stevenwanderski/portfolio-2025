@@ -4,14 +4,29 @@ import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import Hero from '@components/development/Hero.astro';
 import Skills from '@components/development/Skills.astro';
-import Projects from '@components/development/rails/Projects.astro';
+import Projects from '@components/development/wordpress/Projects.astro';
+import Image from '@assets/logo-wordpress.png';
 ---
 
 <Layout>
   <div class="wrap">
     <Header format="full"/>
-    <Hero />
-    <Skills />
+
+    <Hero
+      title="WordPress Development"
+      description="I provide intuitive and beatiful CMS solutions that allow businesses to manage website content and have great admin tools."
+      image={Image}
+      imageAlt="WordPress"
+    />
+
+    <Skills
+      skills={[
+        { title: 'Back-end / CMS', body: 'Advanced Custom Fields (ACF) for custom post types and page fields, form management and submissions view, custom user accounts, robust SEO tools.' },
+        { title: 'Front-end', body: 'React for UI / UX, TailwindCSS for theming, semantic HTML, HTMX for alternative UI / UX handling.' },
+        { title: 'DevOps', body: 'Deploy and host on WPEngine, daily backups, synced staging and production environments.' }
+      ]}
+    />
+
     <Projects />
     <Footer />
   </div>
