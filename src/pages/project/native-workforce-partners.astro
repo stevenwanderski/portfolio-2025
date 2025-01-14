@@ -3,73 +3,38 @@ import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import LogoNWP from '@assets/logo-nwp.svg';
-import Screen1 from '@assets/screen-4agc-1.png';
-import Screen2 from '@assets/screen-4agc-2.png';
-import { Image } from 'astro:assets';
+import Screen1 from '@assets/screen-nwp.png';
+import Project from '@components/Project.astro';
 ---
 
 <Layout>
   <div class="wrap">
     <Header format="full"/>
 
-    <div class="pb-12 mb-12 lg:pb-20">
-      <h1 class="my-12">Project</h1>
-
-      <div class="lg:flex lg:gap-20 lg:justify-between lg:w-full">
-        <div class="max-w-[620px]">
-          <div class="mb-10">
-            <Image src={LogoNWP} alt="Native Workforce Partners" class="h-16 mb-2" />
-
-            <p class="text-xl mb-6">
-              A CMS driven website dedicated to providing resources for native jobseekers and students.
-            </p>
-
-            <a href="https://nativeworkforcepartners.org" class="btn-black" target="_blank">
-              View Site
-            </a>
-          </div>
-
-          <div>
-            <div>
-              <div class="font-bold mb-5">Site Features</div>
-
-              <ul class="list-disc ml-5 space-y-6 mb-10">
-                <li>CMS powered backend provides intuitive content management for non-technical users.</li>
-                <li>Google Map integration that displays search results on an embedded map.</li>
-                <li>Custom responsive design created specifically for the business.</li>
-              </ul>
-            </div>
-
-            <div class="lg:flex lg:gap-20">
-              <div>
-                <div class="font-bold mb-2">Roles Performed</div>
-
-                <ul class="list-disc ml-5 mb-10">
-                  <li>Back-end Development</li>
-                  <li>Front-end Development</li>
-                </ul>
-              </div>
-
-              <div>
-                <div class="font-bold mb-2">Tech Stack</div>
-
-                <ul class="list-disc ml-5 mb-10">
-                  <li>WordPress</li>
-                  <li>PHP / MySQL</li>
-                  <li>TailwindCSS</li>
-                  <li>WPEngine</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="space-y-10">
-          <Image src={Screen1} alt="4aGoodCause screenshot 1" class="rounded-xl max-w-[620px] lg:max-w-[367px]" />
-          <Image src={Screen2} alt="4aGoodCause screenshot 2" class="rounded-xl max-w-[620px] lg:max-w-[367px]" />
-        </div>
-      </div>
-    </div>
+    <Project
+      logo={LogoNWP}
+      logoAlt="Native Workforce Partners"
+      description="A CMS driven website dedicated to providing resources for native jobseekers and students."
+      siteUrl="https://nativeworkforcepartners.org"
+      featureItems={[
+        'CMS powered backend provides intuitive content management for non-technical users.',
+        'Google Map integration that displays search results on an embedded map.',
+        'Custom responsive design created specifically for the business.'
+      ]}
+      roleItems={[
+        'Back-end Development',
+        'Front-end Development'
+      ]}
+      techItems={[
+        'WordPress',
+        'PHP / MySQL',
+        'TailwindCSS',
+        'WPEngine'
+      ]}
+      screenshots={[
+        Screen1
+      ]}
+    />
 
     <Footer />
   </div>

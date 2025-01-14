@@ -17,7 +17,24 @@ import Logo from '@components/Logo.astro';
 
     <div class="flex flex-col" x-cloak x-show="open">
       <a class="py-[8px] font-bold" href="/#testimonials">Testimonials</a>
-      <a class="py-[8px] font-bold" href="https://blog.stevenwanderski.com">Blog</a>
+
+      <div>
+        <div class="py-[8px] font-bold cursor-pointer flex gap-2 items-center">
+          <span>Projects</span>
+
+          <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.5 9L0.736859 0.75L10.2631 0.750001L5.5 9Z" fill="black"/>
+          </svg>
+        </div>
+
+        <ul class="bg-white px-4">
+          <li><a href="/project/4agoodcause" class="py-1 inline-block font-bold hover:text-zinc-600">4aGoodCause</a></li>
+          <li><a href="/project/friends-for-fitz" class="py-1 inline-block font-bold hover:text-zinc-600">Friends for Fitz</a></li>
+          <li><a href="/project/native-workforce-partners" class="py-1 inline-block font-bold hover:text-zinc-600">Native Workforce Partners</a></li>
+          <li><a href="/project/popular-pays" class="py-1 inline-block font-bold hover:text-zinc-600">Popular Pays</a></li>
+        </ul>
+      </div>
+
       <a class="py-[8px] font-bold" href="/resume">Resume</a>
       <a class="py-[8px] font-bold" href="/contact">Contact</a>
     </div>
@@ -28,7 +45,24 @@ import Logo from '@components/Logo.astro';
 
     <div class="flex gap-5">
       <a class="px-[8px] font-bold hover:text-zinc-600" href="/#testimonials">Testimonials</a>
-      <a class="px-[8px] font-bold hover:text-zinc-600" href="https://blog.stevenwanderski.com">Blog</a>
+
+      <div class="group">
+        <div class="px-[8px] font-bold cursor-pointer mb-4 flex gap-2 items-center">
+          <span>Projects</span>
+
+          <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.5 9L0.736859 0.75L10.2631 0.750001L5.5 9Z" fill="black"/>
+          </svg>
+        </div>
+
+        <ul class="group-hover:block hidden absolute bg-white py-5 px-7 shadow rounded">
+          <li><a href="/project/4agoodcause" class="py-1 inline-block font-bold hover:text-zinc-600">4aGoodCause</a></li>
+          <li><a href="/project/friends-for-fitz" class="py-1 inline-block font-bold hover:text-zinc-600">Friends for Fitz</a></li>
+          <li><a href="/project/native-workforce-partners" class="py-1 inline-block font-bold hover:text-zinc-600">Native Workforce Partners</a></li>
+          <li><a href="/project/popular-pays" class="py-1 inline-block font-bold hover:text-zinc-600">Popular Pays</a></li>
+        </ul>
+      </div>
+
       <a class="px-[8px] font-bold hover:text-zinc-600" href="/resume">Resume</a>
       <a class="px-[8px] font-bold hover:text-zinc-600" href="/contact">Contact</a>
     </div>

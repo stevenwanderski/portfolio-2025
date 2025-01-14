@@ -5,73 +5,40 @@ import Footer from '@components/Footer.astro';
 import Logo4aGC from '@assets/logo-4agc.svg';
 import Screen1 from '@assets/screen-4agc-1.png';
 import Screen2 from '@assets/screen-4agc-2.png';
-import { Image } from 'astro:assets';
+import Project from '@components/Project.astro';
 ---
 
 <Layout>
   <div class="wrap">
     <Header format="full"/>
 
-    <div class="pb-12 mb-12 lg:pb-20">
-      <h1 class="my-12">Project</h1>
-
-      <div class="lg:flex lg:gap-20 lg:justify-between lg:w-full">
-        <div class="max-w-[620px]">
-          <div class="mb-10">
-            <Image src={Logo4aGC} alt="4aGoodCause" class="h-8 mb-2" />
-
-            <p class="text-xl mb-6">
-              A platform used by nonprofits to raise money for charities all over the world. Currently, over $180M has been raised on this platform.
-            </p>
-
-            <a href="https://4agoodcause.com" class="btn-black" target="_blank">
-              View Site
-            </a>
-          </div>
-
-          <div>
-            <div>
-              <div class="font-bold mb-5">Site Features</div>
-
-              <ul class="list-disc ml-5 space-y-6 mb-10">
-                <li>Fully-managed payment processing and webhook management using Stripe, Authorize.net, and PayPal</li>
-                <li>Comprehensive CRM features including donor management, admin reports, record import / export, and campaign statistics.</li>
-                <li>Queue and background job management connected to critical system components</li>
-              </ul>
-            </div>
-
-            <div class="lg:flex lg:gap-20">
-              <div>
-                <div class="font-bold mb-2">Roles Performed</div>
-
-                <ul class="list-disc ml-5 mb-10">
-                  <li>Back-end Development</li>
-                  <li>Front-end Development</li>
-                  <li>DevOps / Server Management</li>
-                  <li>Technology Consultant</li>
-                </ul>
-              </div>
-
-              <div>
-                <div class="font-bold mb-2">Tech Stack</div>
-
-                <ul class="list-disc ml-5 mb-10">
-                  <li>Ruby on Rails</li>
-                  <li>Postgres</li>
-                  <li>Heroku</li>
-                  <li>Sidekiq</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="space-y-10">
-          <Image src={Screen1} alt="4aGoodCause screenshot 1" class="rounded-xl max-w-[620px] lg:max-w-[367px]" />
-          <Image src={Screen2} alt="4aGoodCause screenshot 2" class="rounded-xl max-w-[620px] lg:max-w-[367px]" />
-        </div>
-      </div>
-    </div>
+    <Project
+      logo={Logo4aGC}
+      logoAlt="4aGoodCause"
+      description="A platform used by nonprofits to raise money for charities all over the world. Currently, over $180M has been raised on this platform."
+      siteUrl="https://4agoodcause.com"
+      featureItems={[
+        'Fully-managed payment processing and webhook management using Stripe, Authorize.net, and PayPal.',
+        'Comprehensive CRM features including donor management, admin reports, record import / export, and campaign statistics.',
+        'Queue and background job management connected to critical system components.'
+      ]}
+      roleItems={[
+        'Back-end Development',
+        'Front-end Development',
+        'DevOps / Server Management',
+        'Technology Consultant'
+      ]}
+      techItems={[
+        'Ruby on Rails',
+        'Postgres',
+        'Heroku',
+        'Sidekiq'
+      ]}
+      screenshots={[
+        Screen1,
+        Screen2
+      ]}
+    />
 
     <Footer />
   </div>

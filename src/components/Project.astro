@@ -1,0 +1,70 @@
+---
+const {
+  logo,
+  logoAlt,
+  description,
+  siteUrl,
+  featureItems,
+  roleItems,
+  techItems,
+  screenshots
+} = Astro.props;
+
+import Image from 'astro/components/Image.astro';
+---
+
+<div class="pb-12 mb-12 lg:pb-20">
+  <h1 class="my-12">Project</h1>
+
+  <div class="lg:flex lg:gap-20 lg:justify-between lg:w-full">
+    <div class="max-w-[620px]">
+      <div class="mb-10">
+        <Image src={logo} alt={logoAlt} class="h-8 w-auto mb-2" />
+
+        <p class="text-xlxx mb-6">
+          {description}
+        </p>
+
+        <a href={siteUrl} class="btn-black" target="_blank">
+          View Site
+        </a>
+      </div>
+
+      <hr class="mb-14">
+
+      <div>
+        <div class="mb-14">
+          <div class="font-bold mb-5 text-2xl">Site Features</div>
+
+          <ul class="list-disc ml-5 space-y-6 text-xl mb-10xx">
+            {featureItems.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+
+        <div class="lg:flex lg:gap-28">
+          <div>
+            <div class="font-bold mb-2">Roles Performed</div>
+
+            <ul class="list-disc ml-5 mb-10">
+              {roleItems.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+
+          <div>
+            <div class="font-bold mb-2">Tech Stack</div>
+
+            <ul class="list-disc ml-5 mb-10">
+              {techItems.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-10">
+      {screenshots.map((image) => (
+        <Image src={image} alt="" class="rounded-xl w-full max-w-[620px] cdlg:max-w-[367px]" />
+      ))}
+    </div>
+  </div>
+</div>
