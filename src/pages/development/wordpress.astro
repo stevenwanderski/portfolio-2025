@@ -4,8 +4,16 @@ import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import Hero from '@components/development/Hero.astro';
 import Skills from '@components/development/Skills.astro';
+import Service from '@components/development/Service.astro';
 import Projects from '@components/development/wordpress/Projects.astro';
-import Image from '@assets/logo-wordpress.png';
+import ScreenACF from '@assets/screen-acf.png';
+import ScreenNWP from '@assets/screen-nwp-trans.png';
+import ScreenYoast from '@assets/screen-yoast.png';
+import LogoWP from '@assets/logo-wordpress.png';
+import Image from 'astro/components/Image.astro';
+import IconPencil from '@assets/icon-pencil.svg?raw';
+import IconPhone from '@assets/icon-phone.svg?raw';
+import IconSearch from '@assets/icon-search.svg?raw';
 ---
 
 <Layout>
@@ -15,17 +23,50 @@ import Image from '@assets/logo-wordpress.png';
     <Hero
       title="WordPress Development"
       description="I provide intuitive and beatiful CMS solutions that allow businesses to manage website content and have great admin tools."
-      image={Image}
+      image={LogoWP}
       imageAlt="WordPress"
     />
 
-    <Skills
-      skills={[
-        { title: 'Back-end / CMS', body: 'Advanced Custom Fields (ACF) for custom post types and page fields, form management and submissions view, custom user accounts, robust SEO tools.' },
-        { title: 'Front-end', body: 'React for UI / UX, TailwindCSS for theming, semantic HTML, HTMX for alternative UI / UX handling.' },
-        { title: 'DevOps', body: 'Deploy and host on WPEngine, daily backups, synced staging and production environments.' }
-      ]}
-    />
+    <div class="pb-12 mb-12 border-b border-gray-200 lg:pb-20">
+      <div class="mb-16 max-w-[600px]">
+        <h2 class="mb-0">Service Features</h2>
+        <p>All projects contain the following features that adhere to modern WordPress standards and provide comprehensive website management tools.</p>
+      </div>
+
+      <div class="space-y-24">
+        <Service
+          icon={IconPencil}
+          title="Custom Content Management System (CMS) per project."
+          description={[
+            'Because no two projects are the same, each new project is built with a custom CMS. The CMS fields are tailored to the client needs and project requirements.',
+            'The most popular content management plugin is used: ACF (Advanced Custom Fields). The ACF plugin makes it easy to build intuitive and comprehensive admin panels that can handle managing any type of content.'
+          ]}
+          image={ScreenACF}
+          imageAlt="Custom CMS per project"
+        />
+
+        <Service
+          icon={IconPhone}
+          title="Hand-coded, responsive design."
+          description={[
+            'All projects are delivered with a mobile-first responsive design. This means that the website will look great and function correctly on any screen size: phone, tablet, laptop and desktop devices. All websites are hand-coded and no bloated page builders are used. This gives the website a blazing fast load time and a higher ranking in organic search results.'
+          ]}
+          image={ScreenNWP}
+          imageAlt="Responsive, hand-coded designs"
+          layout="reverse"
+        />
+
+        <Service
+          icon={IconSearch}
+          title="Search Engine Optimization (SEO) tools."
+          description={[
+            'All projects include the ability to populate critical webpage components such as the meta title and meta description fields. Using the widely popular plugin Yoast, it’s simple for admins to setup SEO-based content and maintain best practices over time.'
+          ]}
+          image={ScreenYoast}
+          imageAlt="SEO tools"
+        />
+      </div>
+    </div>
 
     <Projects />
     <Footer />

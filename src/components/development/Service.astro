@@ -1,0 +1,28 @@
+---
+const { icon, title, description, image, imageAlt, layout } = Astro.props;
+import Image from "astro/components/Image.astro";
+import { Fragment } from "astro/jsx-runtime";
+---
+
+<div class="lg:flex lg:justify-betweenx lg:gap-[120px]">
+  <div class="space-y-2 mb-12 lg:max-w-[510px]">
+    <Fragment set:html={icon} />
+
+    <h3 class="font-bold text-2xl max-w-[420px]">{title}</h3>
+
+    <div class="space-y-4">
+      {description.map((items) => (
+        <p>{items}</p>
+      ))}
+    </div>
+  </div>
+
+  <Image
+    src={image}
+    class:list={[
+      "w-full lg:max-w-[550px]",
+      { 'order-first': layout === 'reverse' }
+    ]}
+    alt={imageAlt}
+  />
+</div>
