@@ -15,6 +15,16 @@ import Favicon from '@assets/favicon.png';
 		<script src="//unpkg.com/alpinejs" defer></script>
 		<meta name="generator" content={Astro.generator} />
 		<title>Steven Wanderski | Web Developer</title>
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R5HY4N8MEY"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-R5HY4N8MEY');
+		</script>
 	</head>
 	<body class="p-[20px] lg:px-0">
 		<slot />
